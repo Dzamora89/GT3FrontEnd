@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GT3 Pro Stats</title>
+    <link rel="stylesheet" href=".././css/bootstrap.css">
+    <link rel="stylesheet" href=".././styles/style.css">
+    <script src=".././js/bootstrap.bundle.js" defer></script>
+    <script src="./../node_modules/jquery/dist/jquery.js" defer></script>
+    <script src="./CarJS/CarCreate.js" defer></script>
+</head>
+<body>
+<!-- HEADER -->
+<header class="main-header sticky-top">
+    <div class="logo"><a href="index.html">
+        <img alt="GT3 Stats " src=".././img/GT3_Pro_Stats-removebg-preview.png">
+    </a>
+
+    </div>
+    <h1>Admin Side</h1>
+    <nav class="desktop-main-menu">
+        <ul>
+            <li><a href="../index.html"> Client Side</a></li>
+            <li><a href="adminHome.html">HomeAdmin</a></li>
+            <li><a href="ChampionshipAdmin.html">Championships</a></li>
+            <li><a href="DriverAdmin.html">Drivers</a></li>
+            <li><a href="RaceAdmin.html">Races</a></li>
+            <li><a href="CarAdmin.html">Cars</a></li>
+            <li><a href="RaceAdmin.html">RaceResult</a></li>
+            <li><a href="TeamAdmin.html">Team</a></li>
+        </ul>
+    </nav>
+
+
+</header>
+<div id="principal" class="container d-flex flex-column">
+    <h1 class="text-black text-center mt-5 mb-3">Create a Car</h1>
+    <form class="d-flex flex-wrap justify-content-center w-100 gap-3">
+        <div class="input-group mb-3 w-25">
+            <span class="input-group-text">Manufacturer</span>
+            <input id="carManufacturer" type="text" class="form-control" placeholder="Manufacturer" aria-label="Manufacturer" aria-describedby="Manufacturer">
+        </div>
+
+        <div class="input-group mb-3 w-25">
+            <span class="input-group-text" id="Class">class</span>
+            <input id="className" type="text" class="form-control" placeholder="Class" aria-label="Class" aria-describedby="Class">
+        </div>
+        <div class="input-group mb-3 w-25">
+            <span class="input-group-text" id="number">Number</span>
+            <input id="carNumber" type="text" class="form-control" placeholder="Number" aria-label="Number" aria-describedby="Number">
+        </div>
+
+        <select id="teamName" class="form-select w-50" aria-label="Team Select">
+            <option selected hidden>Team</option>
+
+        </select>
+    </form>
+    <button class="btn bg-success align-items w-50 m-auto mt-5" onclick="createRace()">Create Race</button>
+</div>
+
+
+
+</body>
+</html>
