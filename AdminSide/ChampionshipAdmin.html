@@ -9,6 +9,8 @@
     <link rel="stylesheet" href=".././css/bootstrap.css">
     <link rel="stylesheet" href=".././styles/style.css">
     <script src=".././js/bootstrap.bundle.js" defer></script>
+    <script src="./../node_modules/jquery/dist/jquery.js" defer></script>
+    <script src="./ChampionshipJS/ChampionshipAdmin.js" defer></script>
 </head>
 <body>
 <!-- HEADER -->
@@ -21,14 +23,14 @@
     <h1>Admin Side</h1>
     <nav class="desktop-main-menu">
         <ul>
-            <li><a href="index.html"> Client Side</a></li>
-            <li><a href="adminHome.html">HomeAdmin</a></li>
-            <li><a href="ChampionshipAdmin.html">Championships</a></li>
-            <li><a href="DriverAdmin.html">Drivers</a></li>
-            <li><a href="RaceAdmin.html">Races</a></li>
-            <li><a href="CarAdmin.html">Cars</a></li>
-            <li><a href="RaceAdmin.html">RaceResult</a></li>
-            <li><a href="TeamAdmin.html">Team</a></li>
+            <li><a href="./../index.html"> Client Side</a></li>
+            <li><a href="./adminHome.html">HomeAdmin</a></li>
+            <li><a href="./ChampionshipAdmin.html">Championships</a></li>
+            <li><a href="./DriverAdmin.html">Drivers</a></li>
+            <li><a href="./RaceAdmin.html">Races</a></li>
+            <li><a href="./CarAdmin.html">Cars</a></li>
+            <li><a href="./RaceAdmin.html">RaceResult</a></li>
+            <li><a href="./TeamAdmin.html">Team</a></li>
         </ul>
     </nav>
 
@@ -37,18 +39,34 @@
 <div class="container d-flex justify-content-around align-items-stretch col">
     <div class="w-25 card text-black mt-3">
         <h1 class="bg-light card-header">Create a Championship register</h1>
-        <button class="btn border-0 btn-primary">Create a Championship</button>
+        <a class="btn border-0 btn-primary bg-success" a href="./CarCreate.html">Create a Championship</a></a>
     </div>
     <div class="w-25 card text-black mt-3">
         <h1 class="bg-light card-header">Update a Championship register </h1>
-        <button class="btn border-0 btn-primary">Create a Championship</button>
+        <a class="btn border-0 btn-primary bg-black" href="./CarUpdate.html">Update a Championship</a>
     </div>
     <div class="w-25 card text-black mt-3">
         <h1 class="bg-light card-header">Delete a Championship register</h1>
-        <button class="btn border-0 btn-primary btn-danger">Delete a Championship</button>
+        <a class="btn border-0 btn-primary btn-danger" href="./CarDelete.html">Delete a Championship</a>
     </div>
 </div>
+<div class="container mt-5">
+    <table  class="table bg-light table-striped table-hover table-striped">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Season</th>
+            <th scope="col">Country</th>
 
+        </tr>
+        </thead>
+        <tbody id="ChampionshipTable">
+
+        </tbody>
+
+    </table>
+</div>
 
 
 
