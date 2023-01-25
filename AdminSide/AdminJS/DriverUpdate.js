@@ -29,11 +29,7 @@ fetch("http://localhost/gt3prostats/api/driver/getalldriver.php", requestOptions
 
 
 
-
-
-
-
-function showDriver() {
+$('#updateSelect').change((() => {
     var requestOptions = {
         method: 'GET',
         redirect: 'follow'
@@ -42,11 +38,9 @@ function showDriver() {
     let url = `http://localhost/gt3prostats/api/Driver/getDriverByID.php?driverID=${document.getElementById("updateSelect").value}`
 
     fetch(url, requestOptions)
-        .then(response => response.text())
-        .then(result => {
-            let jsonResult = JSON.parse(result)
-            let div = document.getElementById('showDriver')
-            div.innerHTML = `
+        .then(response => response.json())
+        .then(jsonResult => {
+            $('#showDriver').html(`
             <form class="d-flex flex-wrap justify-content-center w-100 gap-3">
         <div class="input-group mb-3 w-25">
             <span class="input-group-text" id="firstName">First Name</span>
@@ -83,12 +77,16 @@ function showDriver() {
 
     </form>
     <button class="btn bg-black  text-white align-items w-50 m-auto mt-5" onclick="updateDriver()">Update Driver</button>
-            `;
+            `);
 
 
         })
         .catch(error => console.log('error', error));
-}
+}))
+
+
+
+
 
 function updateDriver() {
     var myHeaders = new Headers();

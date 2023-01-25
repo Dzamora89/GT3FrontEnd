@@ -8,7 +8,9 @@
     <title>GT3 Pro Stats</title>
     <link rel="stylesheet" href=".././css/bootstrap.css">
     <link rel="stylesheet" href=".././styles/style.css">
+    <script src="./../node_modules/jquery/dist/jquery.js" defer></script>
     <script src=".././js/bootstrap.bundle.js" defer></script>
+    <script src="./ChampionshipJS/ChampionshipUpdate.js" defer></script>
 </head>
 <body>
 <!-- HEADER -->
@@ -36,6 +38,21 @@
 </header>
 
 
+<div id="principal" class="container d-flex flex-column">
+    <h1 class="text-black text-center mt-5 mb-3">Update a Championship</h1>
+
+    <div class="container w-50 d-flex flex-column align-items-center">
+        <select id="updateSelect" class="form-select" aria-label="Default select example">
+            <option selected hidden>Select the Championship you want to Update</option>
+
+        </select>
+    </div>
+    <div id="showChampionship" class="container mt-2 d-flex flex-column">
+
+    </div>
+
+
+</div>
 
 
 
