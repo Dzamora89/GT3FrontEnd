@@ -66,7 +66,7 @@ $('#updateSelect').change(function () {
         </div>
 
     </form>
-    <button class="btn bg-success align-items w-50 m-auto mt-5" onclick="updateChampionship($)">Update championship
+    <button class="btn bg-success align-items w-50 m-auto mt-5" onclick="updateChampionship(${result.championshipID})">Update championship
     </button>`)
 
 

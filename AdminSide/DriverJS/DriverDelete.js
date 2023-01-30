@@ -87,7 +87,7 @@ function deleteDriver() {
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "text/plain");
 
-
+    //Todo Jquery
     let driverID = document.getElementById("deleteSelect").value
 
 
