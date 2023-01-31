@@ -2,13 +2,15 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <title>GT3 Pro Stats</title>
-    <link rel="stylesheet" href="../../css/bootstrap.css">
-    <link rel="stylesheet" href="../../styles/style.css">
-    <script src="../../js/bootstrap.bundle.js" defer></script>
+    <link href="../../css/bootstrap.css" rel="stylesheet">
+    <link href="../../styles/style.css" rel="stylesheet">
+    <script defer src="../../js/bootstrap.bundle.js"></script>
+    <script defer src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script defer src="./TeamCreate.js"></script>
 </head>
 <body>
 <!-- HEADER -->
@@ -24,51 +26,53 @@
             <li><a href="../../index.html"> Client Side</a></li>
             <li><a href="../adminHome.html">HomeAdmin</a></li>
             <li><a href="../ChampionshipJS/ChampionshipAdmin.html">Championships</a></li>
-            <li><a href="../DriverJS/DriverAdmin.html">Drivers</a></li>
+            <li><a href="./DriverAdmin.html">Drivers</a></li>
             <li><a href="../RaceAdmin.html">Races</a></li>
             <li><a href="../CarJS/CarAdmin.html">Cars</a></li>
             <li><a href="../RaceAdmin.html">RaceResult</a></li>
-            <li><a href="TeamAdmin.html">Team</a></li>
+            <li><a href="../TeamJS/TeamAdmin.html">Team</a></li>
         </ul>
     </nav>
 
 
 </header>
-<div class="container d-flex flex-column">
+<div id="principal" class="container d-flex flex-column flex-wrap">
     <h1 class="text-black text-center mt-5 mb-3">Create a Team</h1>
     <form class="d-flex flex-wrap justify-content-center w-100 gap-3">
-        <div class="input-group mb-3 w-25">
+        <div class="input-group mb-3 w-50">
             <span class="input-group-text" id="teamName">Team Name</span>
-            <input type="text" class="form-control" placeholder="Team Name" aria-label="TeamName" aria-describedby="Team-Name">
+            <input id="teamNameInput" aria-describedby="Team-Name" aria-label="TeamName" class="form-control" placeholder="Team Name"
+                   type="text">
         </div>
-        <div class="input-group mb-3 w-25">
+        <div class="input-group mb-3 w-50">
             <span class="input-group-text" id="teamOwner">Team owner</span>
-            <input type="text" class="form-control" placeholder="Team owner" aria-label="TeamOwner" aria-describedby="Team-Owner">
+            <input id="teamOwnerInput" aria-describedby="Team-Owner" aria-label="TeamOwner" class="form-control" placeholder="Team owner"
+                   type="text">
         </div>
-        <div class="input-group mb-3 w-25">
+        <div class="input-group mb-3 w-50">
             <span class="input-group-text" id="teamCountry">Team coutnry</span>
-            <input type="text" class="form-control" placeholder="Team Country" aria-label="TeamCountry" aria-describedby="Team-Country">
+            <input id="teamCountryInput" aria-describedby="Team-Country" aria-label="TeamCountry" class="form-control" placeholder="Team Country"
+                   type="text">
         </div>
-        <div class="input-group mb-3 w-25">
+        <div class="input-group mb-3 w-50">
             <span class="input-group-text" id="teamWebsite">Team Website</span>
-            <input type="url" class="form-control" placeholder="Team Website" aria-label="TeamWebsite" aria-describedby="Team-Website">
+            <input id="teamWebsiteInput" aria-describedby="Team-Website" aria-label="TeamWebsite" class="form-control" placeholder="Team Website"
+                   type="url">
         </div>
-        <div class="input-group mb-3 w-25">
+        <div class="input-group mb-3 w-50">
             <span class="input-group-text" id="teamTwitter">Team Twitter</span>
-            <input type="text" class="form-control" placeholder="Team Twitter" aria-label="TeamTwitter" aria-describedby="Team-Twitter">
+            <input id="teamTwitterInput" aria-describedby="Team-Twitter" aria-label="TeamTwitter" class="form-control" placeholder="Team Twitter"
+                   type="text">
         </div>
-        <div class="input-group mb-3 w-25">
+        <div class="input-group mb-3 w-50">
             <span class="input-group-text" id="teamCarBrand">Team car brand</span>
-            <input type="text" class="form-control" placeholder="teamCarBrand" aria-label="teamCarBrand" aria-describedby="team-car-brand">
+            <input id="teamCarBrandInput" aria-describedby="team-car-brand" aria-label="teamCarBrand" class="form-control" placeholder="teamCarBrand"
+                   type="text">
         </div>
-
 
 
     </form>
-    <button class="btn bg-success align-items w-50 m-auto mt-5" onclick="createRace()">Create Team</button>
+    <button class="btn bg-success align-items w-50 m-auto mt-5" onclick="createTeam()">Create Team</button>
 </div>
-
-
-
 </body>
 </html>
