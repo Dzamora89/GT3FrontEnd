@@ -1,16 +1,10 @@
-/*
-
-
-
-
- */
-
+//Todo: Jquery y Jquery Events
 
 var requestOptions = {
     method: 'GET',
     redirect: 'follow'
 };
-//Todo: Cambiar los Select al evento de Jquery para Change on Select
+
 
 fetch("http://localhost/gt3prostats/api/driver/getalldriver.php", requestOptions)
     .then(response => response.json())

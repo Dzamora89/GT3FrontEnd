@@ -1,3 +1,4 @@
+//Todo: Jquery Events
 var requestOptions = {
     method: 'GET', redirect: 'follow'
 };

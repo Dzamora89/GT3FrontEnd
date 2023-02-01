@@ -1,33 +1,24 @@
+$(document).ready(getSelect())
 
+function getSelect() {
 
-var requestOptions = {
-    method: 'GET',
-    redirect: 'follow'
-};
+    var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+    };
+    fetch("http://localhost/gt3prostats/api/Car/getallCar.php", requestOptions)
+        .then(response => response.json())
+        .then(data => data.forEach( (dato) => {
+            let select = document.getElementById('updateSelect')
+            let option = document.createElement("option")
+            option.value = dato.carID
+            option.text = `#${dato.number} --> ${dato.manufacturer} --> ${dato.teamName} `
+            select.add(option);
+        }  ))
+        .catch(error => console.log('error', error));
+}
+$('#updateSelect').change(() => {
 
-
-fetch("http://localhost/gt3prostats/api/Car/getallCar.php", requestOptions)
-    .then(response => response.json())
-    .then(data => data.forEach( (dato) => {
-        let select = document.getElementById('updateSelect')
-        let option = document.createElement("option")
-        option.value = dato.carID
-        option.text = `#${dato.number} --> ${dato.manufacturer} --> ${dato.teamName} `
-        select.add(option);
-    }  ))
-    .catch(error => console.log('error', error));
-
-
-
-
-
-
-
-
-
-
-
-function showCar() {
     var requestOptions = {
         method: 'GET',
         redirect: 'follow'
@@ -80,7 +71,8 @@ function showCar() {
 
         })
         .catch(error => console.log('error', error));
-}
+})
+
 
 function updateCar() {
     var myHeaders = new Headers();
@@ -132,4 +124,5 @@ function updateCar() {
 
             document.getElementById('principal').appendChild(alert)
         });
+    getSelect()
 }
