@@ -1,13 +1,14 @@
-//Todo: Jquery Events
+$(document).ready(fillTheTable())
+function fillTheTable() {
 
-var requestOptions = {
-    method: 'GET',
-    redirect: 'follow'
-};
+    var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+    };
 
-fetch("http://localhost/gt3prostats/api/driver/getalldriver.php", requestOptions)
-    .then(response => response.json())
-    .then(data => data.forEach( (dato) => {
+    fetch("http://localhost/gt3prostats/api/driver/getalldriver.php", requestOptions)
+        .then(response => response.json())
+        .then(data => data.forEach( (dato) => {
             $('#driverTable').append(`<tr>
                 <td>${dato.driverID}</td>
                 <td>${dato.firstName}</td>
@@ -17,5 +18,7 @@ fetch("http://localhost/gt3prostats/api/driver/getalldriver.php", requestOptions
 
 
         }  ))
-    .catch(error => console.log('error', error));
+        .catch(error => console.log('error', error));
 
+
+}
