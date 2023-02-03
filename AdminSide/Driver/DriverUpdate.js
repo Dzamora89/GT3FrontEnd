@@ -1,23 +1,26 @@
-//Todo: Jquery y Jquery Events
+$( document ).ready(getSelect() )
 
-var requestOptions = {
-    method: 'GET',
-    redirect: 'follow'
-};
+function getSelect() {
 
-
-fetch("http://localhost/gt3prostats/api/driver/getalldriver.php", requestOptions)
-    .then(response => response.json())
-    .then(data => data.forEach( (dato) => {
-        let select = document.getElementById('updateSelect')
-        let option = document.createElement("option")
-        option.value = dato.driverID
-        option.text = `${dato.lastName} , ${dato.firstName} `
-        select.add(option);
-    }  ))
-    .catch(error => console.log('error', error));
+    var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+    };
 
 
+    fetch("http://localhost/gt3prostats/api/driver/getalldriver.php", requestOptions)
+        .then(response => response.json())
+        .then(data => data.forEach( (dato) => {
+            let select = document.getElementById('updateSelect')
+            let option = document.createElement("option")
+            option.value = dato.driverID
+            option.text = `${dato.lastName} , ${dato.firstName} `
+            select.add(option);
+        }  ))
+        .catch(error => console.log('error', error));
+
+
+}
 
 
 
@@ -76,6 +79,7 @@ $('#updateSelect').change((() => {
 
         })
         .catch(error => console.log('error', error));
+    getSelect()
 }))
 
 
@@ -87,15 +91,15 @@ function updateDriver() {
     myHeaders.append("Content-Type", "text/plain");
 
 
-    let driverID = document.getElementById("updateSelect").value
-    let firstName = document.getElementById('firstNameInput').value
-    let lastName = document.getElementById('lastNameInput').value
-    let country = document.getElementById('countryInput').value
-    let url = document.getElementById('urlInput').value
-    let twitter = document.getElementById('twitterInput').value
-    let status = document.getElementById('driverStatusInput').value
-    let initialElo = document.getElementById('initialEloInput').value
-    let birthday = document.getElementById('birthDayInput').value
+    let driverID = $('#updateSelect').val()
+    let firstName = $('#firstNameInput').val()
+    let lastName = $('#lastNameInput').val()
+    let country = $('#countryInput').val()
+    let url = $('#urlInput').val()
+    let twitter = $('#twitterInput').val()
+    let status = $('#driverStatusInput').val()
+    let initialElo = $('#initialEloInput').val()
+    let birthday = $('#birthDayInput').val()
 
 
     var raw = `{\r\n    \"driverID\" : \"${driverID}\",

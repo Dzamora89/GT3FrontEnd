@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../../ClienteSide/styles/style.css">
     <script src="../../node_modules/jquery/dist/jquery.js" defer></script>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.js" defer></script>
-    <script src="./TeamAdmin.js" defer></script>
+    <script src="./RaceCreate.js" defer></script>
 </head>
 <body>
 <!-- HEADER -->
@@ -34,29 +34,26 @@
     </nav>
 </header>
 <!-- Fin del NavBar -->
-<div class="container d-flex flex-column">
+
+
+<div id="principal" class="container d-flex flex-column">
     <h1 class="text-black text-center mt-5 mb-3">Create a Race</h1>
     <form class="d-flex flex-wrap justify-content-center w-100 gap-3">
         <div class="input-group mb-3 w-25">
-            <span class="input-group-text" id="Circuit">Circuit Name</span>
-            <input type="text" class="form-control" placeholder="Circuit" aria-label="circuit" aria-describedby="circuit">
+            <span class="input-group-text" >Track Name</span>
+            <input id="track" type="text" class="form-control" placeholder="Circuit" aria-label="circuit" aria-describedby="circuit">
         </div>
 
         <div class="input-group mb-3 w-25">
-            <span class="input-group-text" id="Country">Country</span>
-            <input type="text" class="form-control" placeholder="Country" aria-label="Country" aria-describedby="Country">
+            <span class="input-group-text" >Country</span>
+            <input id="country" type="text" class="form-control" placeholder="Country" aria-label="Country" aria-describedby="Country">
         </div>
 
         <div class="input-group mb-3 w-25">
-            <span class="input-group-text" id="RaceDate">Race date</span>
-            <input type="date" class="form-control"   aria-label="Race date" aria-describedby="Race-date">
+            <span class="input-group-text" >Race date</span>
+            <input id="dateOfRace" type="date" class="form-control"   aria-label="Race date" aria-describedby="Race-date">
         </div>
-        <!-- Todo Create the Select with DOM -->
-        <select class="form-select w-50" aria-label="Championship Select">
-            <option selected>Championship</option>
-            <option value="1">GTWC Europe</option>
-            <option value="2">DTM Germany</option>
-            <option value="3">GT Masters</option>
+        <select id="championshipSelect" class="form-select w-50" aria-label="Championship Select">
         </select>
     </form>
     <button class="btn bg-success align-items w-50 m-auto mt-5" onclick="createRace()">Create Race</button>

@@ -1,26 +1,39 @@
+$( document ).ready(getSelect() )
+function getSelect() {
 
-function createDriver() {
-
-    let firstName = $('#firstNameInput').val()
-    let lastName = $('#lastNameInput').val()
-    let country = $('#countryInput').val()
-    let url = $('#urlInput').val()
-    let twitter = $('#twitterInput').val()
-    let status = $('#driverStatusInput').val()
-    let initialElo = $('#initialEloInput').val()
-    let birthday = $('#birthDayInput').val()
+    const requestOptions1 = {
+        method: 'GET',
+        redirect: 'follow'
+    };
 
 
+    fetch("http://localhost/gt3prostats/api/championship/getallchampionship.php", requestOptions1)
+        .then(response => response.json())
+        .then(data => data.forEach((dato) => {
+            let select = document.getElementById('championshipSelect')
+            let option = document.createElement("option")
+            option.value = dato.championshipID
+            option.text = `${dato.name} , ${dato.season} `
+            select.add(option);
+        }))
+        .catch(error => console.log('error', error));
 
-    var raw = `{\r\n    \"firstName\" : \"${firstName}\",
-    \r\n    \"lastName\" : \"${lastName}\",
+}
+
+
+function createRace(){
+
+    let track = $('#track').val()
+    let dateOfRace = $('#dateOfRace').val()
+    let country = $('#country').val()
+    let championshipID = $('#championshipSelect').val()
+
+
+
+    var raw = `{\r\n    \"track\" : \"${track}\",
+    \r\n    \"dateOfRace\" : \"${dateOfRace}\",
     \r\n    \"country\" : \"${country}\",
-    \r\n    \"dateOfBirth\" : \"${birthday}\",
-    \r\n    \"driverWebsite\" : \"${url}\",
-    \r\n    \"driverTwitter\" : \"${twitter}\",
-    \r\n    \"driverLicenseLevel\" : \" \",
-    \r\n    \"driverStatus\" : \"${status}\",
-    \r\n    \"driverELO\" : \"${initialElo}\"\r\n}`;
+    \r\n    \"championshipID\" : \"${championshipID}\"}`;
 
 
 
@@ -39,13 +52,14 @@ function createDriver() {
 
 
 
-    let result = fetch("http://localhost/gt3prostats/api/driver/CreateDriver.php", requestOptions)
+    let result = fetch("http://localhost/gt3prostats/api/race/Createrace.php", requestOptions)
         .then(response => response.text())
         .then(result => {
+            console.log(result)
             let alert = document.createElement("div")
             alert.innerHTML =
                 `<div class="alert alert-success alert-dismissible fade show w-50 m-auto mt-3" role="alert">
-                Driver Created
+                Race Created
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
             `;
@@ -57,7 +71,7 @@ function createDriver() {
             let alert = document.createElement("div")
             alert.innerHTML =
                 `<div class="alert alert-danger alert-dismissible fade show w-50 m-auto mt-3" role="alert">
-                Driver Not Created
+                Race Not Created
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
             `;
