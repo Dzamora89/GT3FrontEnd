@@ -1,13 +1,12 @@
 $( document ).ready(getSelect() )
 
 function getSelect() {
-
+    $('#showRace').hide()
+    $('#updateSelect2').hide()
     const requestOptions1 = {
         method: 'GET',
         redirect: 'follow'
     };
-
- //TODO: Investiga el Race Update
     fetch("http://localhost/gt3prostats/api/championship/getallchampionship.php", requestOptions1)
         .then(response => response.json())
         .then(data => data.forEach((dato) => {
@@ -22,7 +21,8 @@ function getSelect() {
 }
 
 $('#updateSelect').change(() => {
-
+    $('#updateSelect2').show()
+    $('#updateSelect2').empty()
     const requestOptions1 = {
         method: 'GET',
         redirect: 'follow'
@@ -53,11 +53,11 @@ $('#updateSelect2').change(() => {
     };
 
     let url = `http://localhost/gt3prostats/api/Race/getRaceByID.php?raceID=${$('#updateSelect2').val()}`
-
+    $('#showRace').show();
     fetch(url, requestOptions2)
         .then(response => response.json())
         .then(jsonResult => {
-            $('#showTeam').html(`<form class="d-flex flex-wrap justify-content-center w-100 gap-3">
+            $('#showRace').html(`<form class="d-flex flex-wrap justify-content-center w-100 gap-3">
         <div class="input-group mb-3 w-25">
             <span class="input-group-text" >Track Name</span>
             <input value="${jsonResult.track}" id="track" type="text" class="form-control" placeholder="Circuit" aria-label="circuit" aria-describedby="circuit">
@@ -129,5 +129,6 @@ function updateRace() {
 
             document.getElementById('principal').appendChild(alert)
         });
+    $('#showRace').hide()
     getSelect()
 }
