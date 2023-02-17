@@ -10,7 +10,7 @@ fetch("http://localhost/gt3prostats/api/championship/getallchampionship.php", re
         let select = document.getElementById('updateSelect')
         let option = document.createElement("option")
         option.value = dato.championshipID
-        option.text = `${dato.name} ${dato.season}`
+        option.text = `${dato.championshipName} ${dato.championshipSeason}`
         select.add(option);
     }))
     .catch(error => console.log('error', error));
@@ -31,38 +31,38 @@ $('#updateSelect').change(function () {
 
         <div class="input-group mb-3 w-50">
             <span class="input-group-text">Championship Name</span>
-            <input id="name" type="text" class="form-control" value="${result.name}"
+            <input id="championshipName" type="text" class="form-control" value="${result.championshipName}"
                    aria-label="name" aria-describedby="name">
         </div>
 
         <div class="input-group mb-3 w-25">
             <span class="input-group-text" id="Class">Country</span>
-            <input id="country" type="text" class="form-control" value="${result.country}" aria-label="country"
+            <input id="championshipCountry" type="text" class="form-control" value="${result.championshipCountry}" aria-label="country"
                    aria-describedby="country">
         </div>
         <div class="input-group mb-3 w-25">
             <span class="input-group-text" id="number">Season</span>
-            <input id="season" type="number" class="form-control" value="${result.season}" aria-label="season"
+            <input id="championshipSeason" type="number" class="form-control" value="${result.championshipSeason}" aria-label="season"
                    aria-describedby="season">
         </div>
         <div class="input-group mb-3 w-50">
             <span class="input-group-text">Championship Website</span>
-            <input id="website" type="text" class="form-control" value="${result.website}"
+            <input id="championshipWebsite" type="text" class="form-control" value="${result.championshipWebsite}"
                    aria-label="website" aria-describedby="website">
         </div>
         <div class="input-group mb-3 w-50">
             <span class="input-group-text">Facebook</span>
-            <input id="facebook" type="text" class="form-control" value="${result.facebook}"
+            <input id="championshipFacebook" type="text" class="form-control" value="${result.championshipFacebook}"
                    aria-label="facebook" aria-describedby="facebook">
         </div>
         <div class="input-group mb-3 w-50">
             <span class="input-group-text">Twitter</span>
-            <input id="twitter" type="text" class="form-control" value="${result.twitter}/"
+            <input id="championshipTwitter" type="text" class="form-control" value="${result.championshipTwitter}/"
                    aria-label="twitter" aria-describedby="twitter">
         </div>
         <div class="input-group mb-3 w-50">
             <span class="input-group-text">Youtube Channel</span>
-            <input id="YouTube" type="text" class="form-control" value="${result.youtube}/"
+            <input id="championshipYoutube" type="text" class="form-control" value="${result.championshipYoutube}/"
                    aria-label="YouTube" aria-describedby="YouTube">
         </div>
 
@@ -78,23 +78,22 @@ $('#updateSelect').change(function () {
 function updateChampionship() {
 
     let championshipID = $('#updateSelect').val()
-    let name = $('#name').val()
-    let country = $('#country').val()
-    let season = $('#season').val()
-    let website = $('#website').val()
-    let facebook = $('#facebook').val()
-    let twitter = $('#twitter').val()
-    let youTube = $('#YouTube').val()
+    let championshipName = $('#championshipName').val()
+    let championshipCountry = $('#championshipCountry').val()
+    let championshipSeason = $('#championshipSeason').val()
+    let championshipWebsite = $('#championshipWebsite').val()
+    let championshipFacebook = $('#championshipFacebook').val()
+    let championshipTwitter = $('#championshipTwitter').val()
+    let championshipYoutube = $('#championshipYoutube').val()
 
-
-    var raw = `{ \r\n    \"championshipID\" : \"${championshipID}\",
-    \r\n    \"name\" : \"${name}\",
-    \r\n    \"country\" : \"${country}\",
-    \r\n    \"season\" : \"${season}\",
-    \r\n    \"website\" : \"${website}\",
-    \r\n    \"facebook\" : \"${facebook}\",
-    \r\n    \"twitter\" : \"${twitter}\",
-    \r\n    \"YouTube\" : \"${youTube}\"}`;
+    const raw = `{ "championshipID" : "${championshipID}",
+    "championshipName" : "${championshipName}",
+    "championshipCountry" : "${championshipCountry}",
+    "championshipSeason" : "${championshipSeason}",
+    "championshipWebsite" : "${championshipWebsite}",
+    "championshipFacebook" : "${championshipFacebook}",
+    "championshipTwitter" : "${championshipTwitter}",
+    "championshipYoutube" : "${championshipYoutube}"}`;
 
 
     var myHeaders = new Headers();
@@ -104,9 +103,10 @@ function updateChampionship() {
     };
 
 
-    let result = fetch("http://localhost/gt3prostats/api/championship/updatechampionship.php", requestOptions)
+    fetch("http://localhost/gt3prostats/api/championship/updatechampionship.php", requestOptions)
         .then(response => response.text())
         .then(result => {
+            console.log(result)
             let alert = document.createElement("div")
             alert.innerHTML = `<div class="alert alert-success alert-dismissible fade show w-50 m-auto mt-3" role="alert">
                 Championship Updated

@@ -1,21 +1,21 @@
 function createChampionship(){
 
-    let name = $('#name').val()
-    let country = $('#country').val()
-    let season = $('#season').val()
-    let website = $('#website').val()
-    let facebook = $('#facebook').val()
-    let twitter = $('#twitter').val()
-    let youTube = $('#YouTube').val()
+    let championshipName = $('#championshipName').val()
+    let championshipCountry = $('#championshipCountry').val()
+    let championshipSeason = $('#championshipSeason').val()
+    let championshipWebsite = $('#championshipWebsite').val()
+    let championshipFacebook = $('#championshipFacebook').val()
+    let championshipTwitter = $('#championshipTwitter').val()
+    let championshipYouTube = $('#championshipYouTube').val()
 
 
-    var raw = `{\r\n    \"name\" : \"${name}\",
-    \r\n    \"country\" : \"${country}\",
-    \r\n    \"season\" : \"${season}\",
-    \r\n    \"website\" : \"${website}\",
-    \r\n    \"facebook\" : \"${facebook}\",
-    \r\n    \"twitter\" : \"${twitter}\",
-    \r\n    \"YouTube\" : \"${youTube}\"}`;
+    var raw = `{\r\n    \"championshipName\" : \"${championshipName}\",
+    \r\n    \"championshipCountry\" : \"${championshipCountry}\",
+    \r\n    \"championshipSeason\" : \"${championshipSeason}\",
+    \r\n    \"championshipWebsite\" : \"${championshipWebsite}\",
+    \r\n    \"championshipFacebook\" : \"${championshipFacebook}\",
+    \r\n    \"championshipTwitter\" : \"${championshipTwitter}\",
+    \r\n    \"championshipYouTube\" : \"${championshipYouTube}\"}`;
 
 
 

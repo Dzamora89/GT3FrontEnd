@@ -11,19 +11,19 @@ fetch("http://localhost/gt3prostats/api/Team/getAllTeam.php", requestOptions)
     }  ))
     .catch(error => console.log('error', error));
 
-function createRace(){
+function createCar(){
 
-    let manufacturer = $('#carManufacturer').val()
-    let teamID = $('#teamName').val()
-    let number = $('#carNumber').val()
-    let clase = $('#className').val()
+    let carManufacturer = $('#carManufacturer').val()
+    let carTeamID = $('#teamName').val()
+    let carNumber = $('#carNumber').val()
+    let carClass = $('#className').val()
 
 
 
-    var raw = `{\r\n    \"manufacturer\" : \"${manufacturer}\",
-    \r\n    \"teamID\" : \"${teamID}\",
-    \r\n    \"number\" : \"${number}\",
-    \r\n    \"class\" : \"${clase}\"}`;
+    var raw = `{\r\n    \"carManufacturer\" : \"${carManufacturer}\",
+    \r\n    \"carTeamID\" : \"${carTeamID}\",
+    \r\n    \"carNumber\" : \"${carNumber}\",
+    \r\n    \"carClass\" : \"${carClass}\"}`;
 
 
 
@@ -45,6 +45,8 @@ function createRace(){
     let result = fetch("http://localhost/gt3prostats/api/Car/CreateCar.php", requestOptions)
         .then(response => response.text())
         .then(result => {
+            //Todo controlar errorres de PDO
+            console.log(result)
             let alert = document.createElement("div")
             alert.innerHTML =
                 `<div class="alert alert-success alert-dismissible fade show w-50 m-auto mt-3" role="alert">

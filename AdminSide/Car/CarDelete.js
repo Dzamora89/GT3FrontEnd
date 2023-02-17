@@ -12,7 +12,7 @@ fetch("http://localhost/gt3prostats/api/Car/getallCar.php", requestOptions)
         let select = document.getElementById('deleteSelect')
         let option = document.createElement("option")
         option.value = dato.carID
-        option.text = `#${dato.number} --> ${dato.manufacturer} --> ${dato.teamName} `
+        option.text = `#${dato.carNumber} --> ${dato.carManufacturer} --> ${dato.teamName} `
         select.add(option);
     }  ))
     .catch(error => console.log('error', error));
@@ -21,7 +21,7 @@ fetch("http://localhost/gt3prostats/api/Car/getallCar.php", requestOptions)
 
 
 
-function showCar() {
+$('#deleteSelect').change( () => {
     var requestOptions = {
         method: 'GET',
         redirect: 'follow'
@@ -38,15 +38,15 @@ function showCar() {
             <form class="d-flex flex-wrap justify-content-center w-100 gap-3">
             <div class="input-group mb-3 ">
                 <span class="input-group-text w-25">Manufacturer</span>
-                <input disabled id="carManufacturer" type="text" class="form-control" placeholder="Manufacturer" aria-label="Manufacturer" aria-describedby="Manufacturer" value="${jsonResult.manufacturer}">
+                <input disabled id="carManufacturer" type="text" class="form-control" placeholder="Manufacturer" aria-label="Manufacturer" aria-describedby="Manufacturer" value="${jsonResult.carManufacturer}">
             </div>
             <div class="input-group mb-3 ">
                 <span class="input-group-text" id="number">Number</span>
-                <input disabled id="carNumber" type="text" class="form-control"  aria-label="Number" aria-describedby="Number" value="${jsonResult.number}">
+                <input disabled id="carNumber" type="text" class="form-control"  aria-label="Number" aria-describedby="Number" value="${jsonResult.carNumber}">
         </div>
             <div class="input-group mb-3 ">
                 <span class="input-group-text" id="Class">class</span>
-                <input disabled id="className" type="text" class="form-control"  aria-label="Class" aria-describedby="Class" value="${jsonResult.classCar}">
+                <input disabled id="className" type="text" class="form-control"  aria-label="Class" aria-describedby="Class" value="${jsonResult.carClass}">
         </div>
         <select disabled id="teamName" class="form-select w-50" aria-label="Team Select">
            
@@ -74,7 +74,8 @@ function showCar() {
 
         })
         .catch(error => console.log('error', error));
-}
+})
+
 
 
 function deleteCar() {

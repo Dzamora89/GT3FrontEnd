@@ -15,9 +15,9 @@ fetch("http://localhost/gt3prostats/api/championship/getAllchampionship.php", re
 
 
         cell1.innerHTML = dato.championshipID
-        cell2.innerHTML = dato.name
-        cell3.innerHTML = dato.season
-        cell4.innerHTML = dato.country
+        cell2.innerHTML = dato.championshipName
+        cell3.innerHTML = dato.championshipSeason
+        cell4.innerHTML = dato.championshipCountry
 
 
 
