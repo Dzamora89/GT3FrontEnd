@@ -40,3 +40,25 @@ function teamSelect() {
         .catch(error => console.log('error', error));
 
 }
+
+$('#TeamSelect').change(() => {
+    var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+    };
+
+    let url = `http://localhost/gt3prostats/api/Car/getCarByTeamID.php?carTeamID=${document.getElementById("TeamSelect").value}`
+    fetch(url, requestOptions)
+        .then(response => response.json())
+        .then(data => {
+            $('#CarSelect').html('<option selected hidden="hidden">Select the Car</option>')
+            data.forEach((dato) => {
+                let select = document.getElementById('CarSelect')
+                let option = document.createElement("option")
+                option.value = dato.carID
+                option.text = `#${dato.carNumber} , ${dato.carManufacturer}`
+                select.add(option);
+            })})
+        .catch(error => console.log('error', error));
+})
+

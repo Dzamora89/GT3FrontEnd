@@ -8,6 +8,7 @@ kanban-plugin: basic
 
 - [ ] RaceResults
 - [ ] ChampionshipEntryJoin
+- [ ] BE CarByTeamID
 
 
 ## Todo Front End
@@ -17,8 +18,10 @@ kanban-plugin: basic
 - [ ] Index
 - [ ] Ranking
 - [ ] Championship
+- [ ] FE ChampionshipEntry
 - [ ] DriverProfiles
 - [ ] Calender
+- [ ] FE Drives
 
 
 ## Todo Documentacion
@@ -31,8 +34,7 @@ kanban-plugin: basic
 
 ## DOING
 
-- [ ] BE CarByTeamID
-- [ ] FE ChampionshipEntry
+- [ ] BE Drives
 
 
 ## DONE
