@@ -146,8 +146,12 @@
   },
   "active": "7d67e4b904518393",
   "lastOpenFiles": [
+    "AdminSide/Race/RaceDelete.js~",
     "AdminSide/Race/RaceAdmin.js~",
     "AdminSide/Driver/DriverUpdate.js~",
+    "AdminSide/Driver/DriverCreate.js~",
+    "AdminSide/Driver/DriverDelete.js~",
+    "AdminSide/Car/CarUpdate.js~",
     "AdminSide/Championship/ChampionshipUpdate.js~",
     "Obsidian/Kanban.md",
     "Obsidian"

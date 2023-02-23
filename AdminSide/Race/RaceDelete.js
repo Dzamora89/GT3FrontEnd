@@ -13,7 +13,7 @@ function getSelect() {
             let select = document.getElementById('deleteSelect')
             let option = document.createElement("option")
             option.value = dato.championshipID
-            option.text = `${dato.name} , ${dato.season} `
+            option.text = `${dato.championshipName} , ${dato.championshipSeason} `
             select.add(option);
         }))
         .catch(error => console.log('error', error));
@@ -37,7 +37,7 @@ $('#deleteSelect').change(() => {
             let option = document.createElement("option")
             if($('#deleteSelect').val() == dato.championshipID){
                 option.value = dato.raceID
-                option.text = `${dato.track} , ${dato.country} `
+                option.text = `${dato.raceTrack} , ${dato.raceCountry} `
                 select.add(option);
             }
         }))

@@ -11,11 +11,11 @@ function createDriver() {
     let birthday = $('#birthDayInput').val()
 
 
-
-    var raw = `{\r\n    \"firstName\" : \"${firstName}\",
-    \r\n    \"lastName\" : \"${lastName}\",
-    \r\n    \"country\" : \"${country}\",
-    \r\n    \"dateOfBirth\" : \"${birthday}\",
+// TODO NOmbres de los ID y las Variables
+    var raw = `{\r\n    \"driverFirstName\" : \"${firstName}\",
+    \r\n    \"driverLastName\" : \"${lastName}\",
+    \r\n    \"driverCountry\" : \"${country}\",
+    \r\n    \"driverDateOfBirth\" : \"${birthday}\",
     \r\n    \"driverWebsite\" : \"${url}\",
     \r\n    \"driverTwitter\" : \"${twitter}\",
     \r\n    \"driverLicenseLevel\" : \" \",

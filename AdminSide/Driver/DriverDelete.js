@@ -15,7 +15,7 @@ function getSelect() {
             let select = document.getElementById('deleteSelect')
             let option = document.createElement("option")
             option.value = dato.driverID
-            option.text = `${dato.lastName} , ${dato.firstName} `
+            option.text = `${dato.drivverLastName} , ${dato.driverFirstName} `
             select.add(option);
         }))
         .catch(error => console.log('error', error));
@@ -40,15 +40,15 @@ $('#deleteSelect').change(() => {
             <form class="d-flex flex-wrap justify-content-center w-100 gap-3">
         <div class="input-group mb-3 w-25">
             <span class="input-group-text" id="firstName">First Name</span>
-            <input readonly id="firstNameInput" type="text" class="form-control" placeholder="First Name" aria-label="FirstName" aria-describedby="First-Name" value="${jsonResult.firstName}"> 
+            <input readonly id="firstNameInput" type="text" class="form-control" placeholder="First Name" aria-label="FirstName" aria-describedby="First-Name" value="${jsonResult.driverFirstName}"> 
         </div>
         <div class="input-group mb-3 w-25">
             <span class="input-group-text" id="lastName">Last Name</span>
-            <input readonly id="lastNameInput" type="text" class="form-control" placeholder="Last Name" aria-label="LastName" aria-describedby="Last-Name" value="${jsonResult.lastName}">
+            <input readonly id="lastNameInput" type="text" class="form-control" placeholder="Last Name" aria-label="LastName" aria-describedby="Last-Name" value="${jsonResult.driverLastName}">
         </div>
         <div class="input-group mb-3 w-25">
             <span class="input-group-text" id="Country">Country</span>
-            <input  readonly id="countryInput" type="text" class="form-control" placeholder="Country" aria-label="Country" aria-describedby="Country" value="${jsonResult.country}">
+            <input  readonly id="countryInput" type="text" class="form-control" placeholder="Country" aria-label="Country" aria-describedby="Country" value="${jsonResult.driverCountry}">
         </div>
         <div class="input-group mb-3 w-50">
             <span class="input-group-text" id="DriverWebsite">Driver Website</span>
@@ -68,7 +68,7 @@ $('#deleteSelect').change(() => {
         </div>
         <div class="input-group mb-3 w-25">
             <span class="input-group-text" id="DriverbirthDate">Driver birth date</span>
-            <input readonly id="birthDayInput" type="date" class="form-control" placeholder="DriverAge"  aria-label="LastName" aria-describedby="Elo-Rating" value="${jsonResult.dateOfBirth}">
+            <input readonly id="birthDayInput" type="date" class="form-control" placeholder="DriverAge"  aria-label="LastName" aria-describedby="Elo-Rating" value="${jsonResult.driverDateOfBirth}">
         </div>
 
     </form>

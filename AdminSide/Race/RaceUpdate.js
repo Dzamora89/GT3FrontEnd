@@ -13,7 +13,7 @@ function getSelect() {
             let select = document.getElementById('updateSelect')
             let option = document.createElement("option")
             option.value = dato.championshipID
-            option.text = `${dato.name} , ${dato.season} `
+            option.text = `${dato.championshipName} , ${dato.championshipSeason} `
             select.add(option);
         }))
         .catch(error => console.log('error', error));
@@ -37,7 +37,7 @@ $('#updateSelect').change(() => {
             let option = document.createElement("option")
             if($('#updateSelect').val() == dato.championshipID){
                 option.value = dato.raceID
-                option.text = `${dato.track} , ${dato.country} `
+                option.text = `${dato.raceTrack} , ${dato.raceCountry} `
                 select.add(option);
             }
 
@@ -92,10 +92,10 @@ function updateRace() {
 
 
     var raw = `{\r\n    \"raceID\" : \"${raceID}\",
-    \r\n    \"track\" : \"${track}\",
-    \r\n    \"dateOfRace\" : \"${dateOfRace}\",
-    \r\n    \"country\" : \"${country}\",
-    \r\n    \"championshipID\" : \"${championshipID}\"}`;
+    \r\n    \"raceTrack\" : \"${track}\",
+    \r\n    \"raceDateOfRace\" : \"${dateOfRace}\",
+    \r\n    \"raceCountry\" : \"${country}\",
+    \r\n    \"raceChampionshipID\" : \"${championshipID}\"}`;
 
     var requestOptions3 = {
         method: 'POST',

@@ -11,8 +11,8 @@ function fillTheTable() {
         .then(data => data.forEach( (dato) => {
             $('#driverTable').append(`<tr>
                 <td>${dato.driverID}</td>
-                <td>${dato.firstName}</td>
-                <td>${dato.lastName}</td>
+                <td>${dato.driverFirstName}</td>
+                <td>${dato.driverLastName}</td>
                 <td>${dato.driverELO}</td>
                 </tr>`)
 

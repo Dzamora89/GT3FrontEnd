@@ -14,7 +14,7 @@ function getSelect() {
             let select = document.getElementById('updateSelect')
             let option = document.createElement("option")
             option.value = dato.driverID
-            option.text = `${dato.lastName} , ${dato.firstName} `
+            option.text = `${dato.driverLastName} , ${dato.driverFirstName} `
             select.add(option);
         }  ))
         .catch(error => console.log('error', error));
@@ -41,15 +41,15 @@ $('#updateSelect').change((() => {
             <form class="d-flex flex-wrap justify-content-center w-100 gap-3">
         <div class="input-group mb-3 w-25">
             <span class="input-group-text" id="firstName">First Name</span>
-            <input id="firstNameInput" type="text" class="form-control" placeholder="First Name" aria-label="FirstName" aria-describedby="First-Name" value="${jsonResult.firstName}"> 
+            <input id="firstNameInput" type="text" class="form-control" placeholder="First Name" aria-label="FirstName" aria-describedby="First-Name" value="${jsonResult.driverFirstName}"> 
         </div>
         <div class="input-group mb-3 w-25">
             <span class="input-group-text" id="lastName">Last Name</span>
-            <input  id="lastNameInput" type="text" class="form-control" placeholder="Last Name" aria-label="LastName" aria-describedby="Last-Name" value="${jsonResult.lastName}">
+            <input  id="lastNameInput" type="text" class="form-control" placeholder="Last Name" aria-label="LastName" aria-describedby="Last-Name" value="${jsonResult.driverLastName}">
         </div>
         <div class="input-group mb-3 w-25">
             <span class="input-group-text" id="Country">Country</span>
-            <input id="countryInput" type="text" class="form-control" placeholder="Country" aria-label="Country" aria-describedby="Country" value="${jsonResult.country}">
+            <input id="countryInput" type="text" class="form-control" placeholder="Country" aria-label="Country" aria-describedby="Country" value="${jsonResult.driverCountry}">
         </div>
         <div class="input-group mb-3 w-50">
             <span class="input-group-text" id="DriverWebsite">Driver Website</span>
@@ -69,7 +69,7 @@ $('#updateSelect').change((() => {
         </div>
         <div class="input-group mb-3 w-25">
             <span class="input-group-text" id="DriverbirthDate">Driver birth date</span>
-            <input id="birthDayInput" type="date" class="form-control" placeholder="DriverAge"  aria-label="LastName" aria-describedby="Elo-Rating" value="${jsonResult.dateOfBirth}">
+            <input id="birthDayInput" type="date" class="form-control" placeholder="DriverAge"  aria-label="LastName" aria-describedby="Elo-Rating" value="${jsonResult.driverDateOfBirth}">
         </div>
 
     </form>
@@ -103,10 +103,10 @@ function updateDriver() {
 
 
     var raw = `{\r\n    \"driverID\" : \"${driverID}\",
-    \r\n    \"firstName\" : \"${firstName}\",
-    \r\n    \"lastName\" : \"${lastName}\",
-    \r\n    \"country\" : \"${country}\",
-    \r\n    \"dateOfBirth\" : \"${birthday}\",
+    \r\n    \"driverFirstName\" : \"${firstName}\",
+    \r\n    \"driverLastName\" : \"${lastName}\",
+    \r\n    \"driverCountry\" : \"${country}\",
+    \r\n    \"driverDateOfBirth\" : \"${birthday}\",
     \r\n    \"driverWebsite\" : \"${url}\",
     \r\n    \"driverTwitter\" : \"${twitter}\",
     \r\n    \"driverLicenseLevel\" : \"\",

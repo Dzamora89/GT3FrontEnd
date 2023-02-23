@@ -13,7 +13,7 @@ function getSelect() {
             let select = document.getElementById('championshipSelect')
             let option = document.createElement("option")
             option.value = dato.championshipID
-            option.text = `${dato.name} , ${dato.season} `
+            option.text = `${dato.championshipName} , ${dato.championshipSeason} `
             select.add(option);
         }))
         .catch(error => console.log('error', error));
@@ -30,10 +30,10 @@ function createRace(){
 
 
 
-    var raw = `{\r\n    \"track\" : \"${track}\",
-    \r\n    \"dateOfRace\" : \"${dateOfRace}\",
-    \r\n    \"country\" : \"${country}\",
-    \r\n    \"championshipID\" : \"${championshipID}\"}`;
+    var raw = `{\r\n    \"raceTrack\" : \"${track}\",
+    \r\n    \"raceDateOfRace\" : \"${dateOfRace}\",
+    \r\n    \"raceCountry\" : \"${country}\",
+    \r\n    \"raceChampionshipID\" : \"${championshipID}\"}`;
 
 
 
