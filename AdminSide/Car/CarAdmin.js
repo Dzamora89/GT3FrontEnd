@@ -4,7 +4,7 @@ var requestOptions = {
 };
 
 //Todo:Jquery
-fetch("http://localhost/gt3prostats/api/Car/getAllCar.php", requestOptions)
+fetch("http://localhost/gt3prostats/backend/api/Car/getAllCar.php", requestOptions)
     .then(response => response.json())
     .then(data =>
         data.forEach( (dato) => {

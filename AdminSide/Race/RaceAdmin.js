@@ -6,7 +6,7 @@ function fillTheTable() {
         redirect: 'follow'
     };
 
-    fetch("http://localhost/gt3prostats/api/race/getallRace.php", requestOptions)
+    fetch("http://localhost/gt3prostats/backend/api/race/getallRace.php", requestOptions)
         .then(response => response.json())
         .then(dataRaces => {
             dataRaces.forEach((dato) =>{

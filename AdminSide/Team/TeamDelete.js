@@ -8,7 +8,7 @@ function getSelect() {
     };
 
 
-    fetch("http://localhost/gt3prostats/api/team/getallteam.php", requestOptions1)
+    fetch("http://localhost/gt3prostats/backend/api/team/getallteam.php", requestOptions1)
         .then(response => response.json())
         .then(data => data.forEach((dato) => {
             let select = document.getElementById('deleteSelect')
@@ -28,7 +28,7 @@ $('#deleteSelect').change((() => {
         redirect: 'follow'
     };
 
-    let url = `http://localhost/gt3prostats/api/team/getteamByID.php?teamID=${document.getElementById("deleteSelect").value}`
+    let url = `http://localhost/gt3prostats/backend/api/team/getteamByID.php?teamID=${document.getElementById("deleteSelect").value}`
 
     fetch(url, requestOptions2)
         .then(response => response.json())
@@ -92,7 +92,7 @@ function deleteTeam() {
         redirect: 'follow'
     };
 
-    fetch("http://localhost/gt3prostats/api/team/deleteTeam.php", requestOptions)
+    fetch("http://localhost/gt3prostats/backend/api/team/deleteTeam.php", requestOptions)
         .then(response => response.text())
         .then(result => {
             console.log(result)

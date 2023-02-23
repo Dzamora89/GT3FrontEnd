@@ -4,7 +4,7 @@ var requestOptions = {
 };
 
 
-fetch("http://localhost/gt3prostats/api/Team/getAllTeam.php", requestOptions)
+fetch("http://localhost/gt3prostats/backend/api/Team/getAllTeam.php", requestOptions)
     .then(response => response.json())
     .then(data => data.forEach( (dato) => {
         $('#teamName').append(`<option value="${dato.teamID}">${dato.teamName}</option>`)
@@ -42,7 +42,7 @@ function createCar(){
 
 
 
-    let result = fetch("http://localhost/gt3prostats/api/Car/CreateCar.php", requestOptions)
+    let result = fetch("http://localhost/gt3prostats/backend/api/Car/CreateCar.php", requestOptions)
         .then(response => response.text())
         .then(result => {
             //Todo controlar errorres de PDO

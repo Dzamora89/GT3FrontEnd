@@ -6,7 +6,7 @@ function fillTheTable() {
         redirect: 'follow'
     };
 
-    fetch("http://localhost/gt3prostats/api/driver/getalldriver.php", requestOptions)
+    fetch("http://localhost/gt3prostats/backend/api/driver/getalldriver.php", requestOptions)
         .then(response => response.json())
         .then(data => data.forEach( (dato) => {
             $('#driverTable').append(`<tr>

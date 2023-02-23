@@ -34,7 +34,7 @@ function createChampionship(){
 
 
 
-    let result = fetch("http://localhost/gt3prostats/api/championship/Createchampionship.php", requestOptions)
+    let result = fetch("http://localhost/gt3prostats/backend/api/championship/Createchampionship.php", requestOptions)
         .then(response => response.text())
         .then(result => {
             let alert = document.createElement("div")

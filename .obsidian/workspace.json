@@ -1,0 +1,155 @@
+{
+  "main": {
+    "id": "fc2f88345c3d2672",
+    "type": "split",
+    "children": [
+      {
+        "id": "e8a904a086ec89cc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7d67e4b904518393",
+            "type": "leaf",
+            "state": {
+              "type": "kanban",
+              "state": {
+                "file": "Obsidian/Kanban.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "5ece003c1d8eef7e",
+    "type": "split",
+    "children": [
+      {
+        "id": "c99bb349cc5d5240",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ae1d616ebdf07aa6",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "17968c23f2b37869",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "9547139e760cdd09",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "fa36f4c410bffd81",
+    "type": "split",
+    "children": [
+      {
+        "id": "eb639e566c2e0648",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bc5e4439c00c94af",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Obsidian/Kanban.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "c4ba27f0d771855a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Obsidian/Kanban.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2507cd21830c0a9b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "4265fdf16c2d53bb",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Obsidian/Kanban.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "7d67e4b904518393",
+  "lastOpenFiles": [
+    "AdminSide/Race/RaceAdmin.js~",
+    "AdminSide/Driver/DriverUpdate.js~",
+    "AdminSide/Championship/ChampionshipUpdate.js~",
+    "Obsidian/Kanban.md",
+    "Obsidian"
+  ]
+}

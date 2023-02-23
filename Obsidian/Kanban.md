@@ -1,0 +1,35 @@
+---
+
+kanban-plugin: basic
+
+---
+
+## Todo
+
+- [ ] Hacer Clase #BE <br>- [ ] ChampionshipJoin<br>- [ ] Drives
+- [ ] Admin #FE <br>- [ ] Home
+- [ ] ChampionshipEntry #FE <br>- [ ] Create<br>- [ ] Delete<br>- [ ] Update<br>- [ ] Admin
+- [ ] RaceResults #FE <br>- [ ] Admin<br>- [ ] Create<br>- [ ] Delete<br>- [ ] Update
+- [ ] Client Side #FE <br>- [ ] Ranking<br>- [ ] Perfiles Pilotos<br>- [ ] Paginas de Campeonatos<br>- [ ] Paginas de Equipos<br>- [ ] Paginas de Coches<br>- [ ] Vista de FindeSemana<br>- [ ] Siguientes Carreras
+- [ ] Actualizar a Jquery #FE <br>- [ ] Admin<br>- [ ] Car<br>- [ ] Championship<br>- [ ] ChampionshipEntry<br>- [ ] Driver<br>- [ ] Race<br>- [ ] RaceResult<br>- [ ] Team
+- [ ] NavBarSecundariaParaCRU #FE<br>- [ ] Admin<br>- [ ] Championship<br>- [ ] ChampionshipEntry<br>- [ ] Driver<br>- [ ] Race<br>- [ ] RaceResult<br>- [ ] Team
+- [ ] NavbarPrimariaConAjax #FE <br>- [ ] Admin<br>- [ ] Car<br>- [ ] Championship<br>- [ ] ChampionshipEntry<br>- [ ] Driver<br>- [ ] Race<br>- [ ] RaceResult<br>- [ ] Team
+
+
+## Doing
+
+
+
+## Done
+
+- [x] UpdateLinks #FE <br>- [x] URL<br>- [x] CAR<br>- [x] ADMIN<br>- [x] Championship<br>- [x] ChampionshipEntry<br>- [x] Driver<br>- [x] Race<br>- [x] RaceResult<br>- [x] Team
+- [x] ComprobarEnlaces #BE<br>- [x] Car<br>- [x] Championship<br>- [ ] ChampionshipEntry<br>- [ ] Driver<br>- [ ] Race<br>- [ ] RaceResult<br>- [ ] Team
+
+
+
+
+%% kanban:settings
+```
+{"kanban-plugin":"basic","new-line-trigger":"enter","show-checkboxes":true,"hide-tags-in-title":true,"tag-colors":[{"tagKey":"","color":"rgba(8, 4, 21, 1)","backgroundColor":"rgba(193, 20, 184, 0.1)"},{"tagKey":"","color":"rgba(10, 5, 28, 1)","backgroundColor":"rgba(155, 0, 0, 0.83)"}]}
+```
+%%

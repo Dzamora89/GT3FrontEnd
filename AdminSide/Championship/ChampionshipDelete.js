@@ -5,7 +5,7 @@ var requestOptions = {
 };
 //Todo: Cambiar los Select al evento de Jquery para Change on Select
 
-fetch("http://localhost/gt3prostats/api/championship/getallchampionship.php", requestOptions)
+fetch("http://localhost/gt3prostats/backend/api/championship/getallchampionship.php", requestOptions)
     .then(response => response.json())
     .then(data => data.forEach((dato) => {
         let select = document.getElementById('updateSelect')
@@ -21,7 +21,7 @@ $('#updateSelect').change(function () {
         method: 'GET', redirect: 'follow'
     };
 
-    let url = `http://localhost/gt3prostats/api/championship/getchampionshipByID.php?championshipID=${document.getElementById("updateSelect").value}`
+    let url = `http://localhost/gt3prostats/backend/api/championship/getchampionshipByID.php?championshipID=${document.getElementById("updateSelect").value}`
 
     fetch(url, requestOptions)
         .then(response => response.json())
@@ -92,7 +92,7 @@ function deleteChampionship(championshipID) {
         redirect: 'follow'
     };
 
-    fetch("http://localhost/gt3prostats/api/championship/Deletechampionship.php", requestOptions)
+    fetch("http://localhost/gt3prostats/backend/api/championship/Deletechampionship.php", requestOptions)
         .then(response => response.text())
         .then(result => {
             console.log(result)

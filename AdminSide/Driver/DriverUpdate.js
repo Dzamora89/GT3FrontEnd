@@ -8,7 +8,7 @@ function getSelect() {
     };
 
 
-    fetch("http://localhost/gt3prostats/api/driver/getalldriver.php", requestOptions)
+    fetch("http://localhost/gt3prostats/backend/api/driver/getalldriver.php", requestOptions)
         .then(response => response.json())
         .then(data => data.forEach( (dato) => {
             let select = document.getElementById('updateSelect')
@@ -32,7 +32,7 @@ $('#updateSelect').change((() => {
         redirect: 'follow'
     };
 
-    let url = `http://localhost/gt3prostats/api/Driver/getDriverByID.php?driverID=${document.getElementById("updateSelect").value}`
+    let url = `http://localhost/gt3prostats/backend/api/Driver/getDriverByID.php?driverID=${document.getElementById("updateSelect").value}`
 
     fetch(url, requestOptions)
         .then(response => response.json())
@@ -120,7 +120,7 @@ function updateDriver() {
         redirect: 'follow'
     };
 
-    fetch("http://localhost/gt3prostats/api/driver/UpdateDriver.php", requestOptions)
+    fetch("http://localhost/gt3prostats/backend/api/driver/UpdateDriver.php", requestOptions)
         .then(response => response.text())
         .then(result => {
             let alert = document.createElement("div")

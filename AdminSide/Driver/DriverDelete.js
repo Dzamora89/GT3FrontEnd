@@ -9,7 +9,7 @@ function getSelect() {
     };
 
 
-    fetch("http://localhost/gt3prostats/api/driver/getalldriver.php", requestOptions1)
+    fetch("http://localhost/gt3prostats/backend/api/driver/getalldriver.php", requestOptions1)
         .then(response => response.json())
         .then(data => data.forEach((dato) => {
             let select = document.getElementById('deleteSelect')
@@ -29,7 +29,7 @@ $('#deleteSelect').change(() => {
         redirect: 'follow'
     };
 
-    let url = `http://localhost/gt3prostats/api/Driver/getDriverByID.php?driverID=${document.getElementById("deleteSelect").value}`
+    let url = `http://localhost/gt3prostats/backend/api/Driver/getDriverByID.php?driverID=${document.getElementById("deleteSelect").value}`
 
     fetch(url, requestOptions)
         .then(response => response.text())
@@ -97,7 +97,7 @@ function deleteDriver() {
         redirect: 'follow'
     };
 
-    fetch("http://localhost/gt3prostats/api/driver/DeleteDriver.php", requestOptions)
+    fetch("http://localhost/gt3prostats/backend/api/driver/DeleteDriver.php", requestOptions)
         .then(response => response.text())
         .then(result => {
             console.log(result)

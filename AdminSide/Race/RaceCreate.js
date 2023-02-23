@@ -7,7 +7,7 @@ function getSelect() {
     };
 
 
-    fetch("http://localhost/gt3prostats/api/championship/getallchampionship.php", requestOptions1)
+    fetch("http://localhost/gt3prostats/backend/api/championship/getallchampionship.php", requestOptions1)
         .then(response => response.json())
         .then(data => data.forEach((dato) => {
             let select = document.getElementById('championshipSelect')
@@ -52,7 +52,7 @@ function createRace(){
 
 
 
-    let result = fetch("http://localhost/gt3prostats/api/race/Createrace.php", requestOptions)
+    let result = fetch("http://localhost/gt3prostats/backend/api/race/Createrace.php", requestOptions)
         .then(response => response.text())
         .then(result => {
             console.log(result)

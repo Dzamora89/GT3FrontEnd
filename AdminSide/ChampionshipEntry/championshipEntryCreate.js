@@ -9,7 +9,7 @@ function championshipSelect() {
         method: 'GET', redirect: 'follow'
     };
 
-    fetch("http://localhost/gt3prostats/api/championship/getallchampionship.php", requestOptions)
+    fetch("http://localhost/gt3prostats/backend/api/championship/getallchampionship.php", requestOptions)
         .then(response => response.json())
         .then(data => data.forEach((dato) => {
             let select = document.getElementById('championShipSelect')
@@ -28,7 +28,7 @@ function teamSelect() {
     };
 
 
-    fetch("http://localhost/gt3prostats/api/team/getallteam.php", requestOptions1)
+    fetch("http://localhost/gt3prostats/backend/api/team/getallteam.php", requestOptions1)
         .then(response => response.json())
         .then(data => data.forEach((dato) => {
             let select = document.getElementById('TeamSelect')
@@ -47,7 +47,7 @@ $('#TeamSelect').change(() => {
         redirect: 'follow'
     };
 
-    let url = `http://localhost/gt3prostats/api/Car/getCarByTeamID.php?carTeamID=${document.getElementById("TeamSelect").value}`
+    let url = `http://localhost/gt3prostats/backend/api/Car/getCarByTeamID.php?carTeamID=${document.getElementById("TeamSelect").value}`
     fetch(url, requestOptions)
         .then(response => response.json())
         .then(data => {

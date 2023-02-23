@@ -7,7 +7,7 @@ function getSelect() {
         method: 'GET',
         redirect: 'follow'
     };
-    fetch("http://localhost/gt3prostats/api/Car/getallCar.php", requestOptions)
+    fetch("http://localhost/gt3prostats/backend/api/Car/getallCar.php", requestOptions)
         .then(response => response.json())
         .then(data => data.forEach( (dato) => {
             let select = document.getElementById('updateSelect')
@@ -25,7 +25,7 @@ $('#updateSelect').change(() => {
         redirect: 'follow'
     };
 
-    let url = `http://localhost/gt3prostats/api/Car/getCarByID.php?carID=${document.getElementById("updateSelect").value}`
+    let url = `http://localhost/gt3prostats/backend/api/Car/getCarByID.php?carID=${document.getElementById("updateSelect").value}`
 
     fetch(url, requestOptions)
         .then(response => response.json())
@@ -57,7 +57,7 @@ $('#updateSelect').change(() => {
     `;
             let team = result.carTeamID
 
-            fetch("http://localhost/gt3prostats/api/Team/getAllTeam.php", requestOptions)
+            fetch("http://localhost/gt3prostats/backend/api/Team/getAllTeam.php", requestOptions)
                 .then(response => response.json())
                 .then(data => data.forEach( (dato) => {
                     if (dato.teamID === team){
@@ -99,7 +99,7 @@ function updateCar() {
         redirect: 'follow'
     };
 
-    fetch("http://localhost/gt3prostats/api/car/UpdateCar.php", requestOptions)
+    fetch("http://localhost/gt3prostats/backend/api/car/UpdateCar.php", requestOptions)
         .then(response => response.text())
         .then(result => {
             console.log(result)

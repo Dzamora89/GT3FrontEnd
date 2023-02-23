@@ -22,7 +22,7 @@ function createTeam() {
         body: raw,
         redirect: 'follow'
     };
-    let result = fetch("http://localhost/gt3prostats/api/team/CreateTeam.php", requestOptions)
+    let result = fetch("http://localhost/gt3prostats/backend/api/team/CreateTeam.php", requestOptions)
         .then(response => response.text())
         .then(result => {
             console.log(result)

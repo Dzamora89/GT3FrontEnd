@@ -39,7 +39,7 @@ function createDriver() {
 
 
 
-    let result = fetch("http://localhost/gt3prostats/api/driver/CreateDriver.php", requestOptions)
+    let result = fetch("http://localhost/gt3prostats/backend/api/driver/CreateDriver.php", requestOptions)
         .then(response => response.text())
         .then(result => {
             let alert = document.createElement("div")

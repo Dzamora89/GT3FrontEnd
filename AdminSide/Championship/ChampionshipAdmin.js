@@ -3,7 +3,7 @@ var requestOptions = {
     method: 'GET',
     redirect: 'follow'
 };
-fetch("http://localhost/gt3prostats/api/championship/getAllchampionship.php", requestOptions)
+fetch("http://localhost/gt3prostats/backend/api/championship/getAllchampionship.php", requestOptions)
     .then(response => response.json())
     .then(data => data.forEach(dato => {
         let table = document.getElementById('ChampionshipTable')

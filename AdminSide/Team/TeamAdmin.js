@@ -4,7 +4,7 @@ var requestOptions = {
     redirect: 'follow'
 };
 
-fetch("http://localhost/gt3prostats/api/team/getallteam.php", requestOptions)
+fetch("http://localhost/gt3prostats/backend/api/team/getallteam.php", requestOptions)
     .then(response => response.json())
     .then(data => data.forEach((dato) => {
         $('#TeamTable').append(`<tr>
