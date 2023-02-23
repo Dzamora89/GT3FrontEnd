@@ -42,6 +42,7 @@ function createDriver() {
     let result = fetch("http://localhost/gt3prostats/backend/api/driver/CreateDriver.php", requestOptions)
         .then(response => response.text())
         .then(result => {
+            console.log(result)
             let alert = document.createElement("div")
             alert.innerHTML =
                 `<div class="alert alert-success alert-dismissible fade show w-50 m-auto mt-3" role="alert">
