@@ -21,7 +21,7 @@ $('#updateSelect').change(function () {
         method: 'GET', redirect: 'follow'
     };
 
-    let url = `http://localhost/gt3prostats/backend/api/championship/getchampionshipByID.php?championshipID=${document.getElementById("updateSelect").value}`
+    let url = `http://localhost/gt3prostats/backend/api/championship/getchampionshipByID.php?championshipID=${$('#updateSelect').val()}`
 
     fetch(url, requestOptions)
         .then(response => response.json())

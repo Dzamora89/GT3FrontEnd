@@ -10,6 +10,13 @@ function getSelect() {
 
     fetch("http://localhost/gt3prostats/backend/api/driver/getalldriver.php", requestOptions)
         .then(response => response.json())
+        .then(data => data.sort((a,b) => {
+            if (a.driverLastName > b.driverLastName){
+                return 1
+            }else {
+                return -1
+            }
+            return 0}))
         .then(data => data.forEach( (dato) => {
             let select = document.getElementById('updateSelect')
             let option = document.createElement("option")
@@ -32,7 +39,7 @@ $('#updateSelect').change((() => {
         redirect: 'follow'
     };
 
-    let url = `http://localhost/gt3prostats/backend/api/Driver/getDriverByID.php?driverID=${document.getElementById("updateSelect").value}`
+    let url = `http://localhost/gt3prostats/backend/api/Driver/getDriverByID.php?driverID=${$("#updateSelect").val()}`
 
     fetch(url, requestOptions)
         .then(response => response.json())
@@ -123,6 +130,7 @@ function updateDriver() {
     fetch("http://localhost/gt3prostats/backend/api/driver/UpdateDriver.php", requestOptions)
         .then(response => response.text())
         .then(result => {
+            console.log(result)
             let alert = document.createElement("div")
             alert.innerHTML =
                 `<div class="alert alert-success alert-dismissible fade show w-50 m-auto mt-3" role="alert">
@@ -134,6 +142,8 @@ function updateDriver() {
             document.getElementById('principal').appendChild(alert)
         })
         .catch(error => {
+            console.log(error)
+
             let alert = document.createElement("div")
             alert.innerHTML =
                 `<div class="alert alert-danger alert-dismissible fade show w-50 m-auto mt-3" role="alert">

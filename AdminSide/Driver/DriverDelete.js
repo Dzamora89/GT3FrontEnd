@@ -11,11 +11,19 @@ function getSelect() {
 
     fetch("http://localhost/gt3prostats/backend/api/driver/getalldriver.php", requestOptions1)
         .then(response => response.json())
+        .then(data => data.sort((a,b) => {
+            if (a.driverLastName > b.driverLastName){
+                return 1
+            }else {
+                return -1
+            }
+            return 0
+        }))
         .then(data => data.forEach((dato) => {
             let select = document.getElementById('deleteSelect')
             let option = document.createElement("option")
             option.value = dato.driverID
-            option.text = `${dato.drivverLastName} , ${dato.driverFirstName} `
+            option.text = `${dato.driverLastName} , ${dato.driverFirstName} `
             select.add(option);
         }))
         .catch(error => console.log('error', error));

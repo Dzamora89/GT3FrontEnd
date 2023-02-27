@@ -7,6 +7,7 @@ kanban-plugin: basic
 ## TODO #BE
 
 - [ ] Hacer Clase #BE <br>- [ ] ChampionshipJoin<br>- [ ] Drives
+- [ ] Preparar los Query para Paginar<br>- [ ] Car<br>- [ ] Championship<br>- [ ] Driver<br>- [ ] Race<br>- [ ] Team<br>- [ ] RaceResult<br>- [ ] ChampionshipEntry
 
 
 ## Todo #FE
@@ -19,11 +20,12 @@ kanban-plugin: basic
 - [ ] NavBarSecundariaParaCRU #FE<br>- [ ] Admin<br>- [ ] Championship<br>- [ ] ChampionshipEntry<br>- [ ] Driver<br>- [ ] Race<br>- [ ] RaceResult<br>- [ ] Team
 - [ ] NavbarPrimariaConAjax #FE <br>- [ ] Admin<br>- [ ] Car<br>- [ ] Championship<br>- [ ] ChampionshipEntry<br>- [ ] Driver<br>- [ ] Race<br>- [ ] RaceResult<br>- [ ] Team
 - [ ] ComprobacionDatosExistentes<br>- [ ] car<br>- [ ] championship<br>- [ ] championsentry<br>- [ ] driver<br>- [ ] race<br>- [ ] raceResult<br>- [ ] team
+- [ ] Pagination<br>- [ ] Admin<br>- [ ] Car<br>- [ ] Championship<br>- [ ] driver<br>- [ ] Race<br>- [ ] RaceResult<br>- [ ] Team<br>- [ ]
 
 
 ## Doing
 
-- [ ] Test Time Baby<br>- [ ] car<br>- [ ] championship<br>- [ ] championshipentry<br>- [ ] driver<br>- [ ] race<br>- [ ] raceResult<br>- [ ] Team
+- [ ] Test Time Baby<br>- [x] car<br>- [x] championship<br>- [ ] championshipentry<br>- [x] driver<br>- [x] race<br>- [ ] raceResult<br>- [x] Team
 
 
 ## Done

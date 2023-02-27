@@ -6,6 +6,14 @@ var requestOptions = {
 
 fetch("http://localhost/gt3prostats/backend/api/Team/getAllTeam.php", requestOptions)
     .then(response => response.json())
+    .then(data => data.sort((a ,b ) => {
+        if (a.teamName > b.teamName){
+            return 1
+        }else {
+            return -1
+        }
+        return 0
+    }))
     .then(data => data.forEach( (dato) => {
         $('#teamName').append(`<option value="${dato.teamID}">${dato.teamName}</option>`)
     }  ))

@@ -28,18 +28,17 @@ $('#updateSelect').change(() => {
         redirect: 'follow'
     };
 
-    let url = `http://localhost/gt3prostats/backend/api/race/getraceofchampionshipid.php?championshipID=${document.getElementById("updateSelect").value}`
+    let url = `http://localhost/gt3prostats/backend/api/race/getraceofchampionshipid.php?raceChampionshipID=${document.getElementById("updateSelect").value}`
 
     fetch(url, requestOptions1)
         .then(response => response.json())
-        .then(data => data.forEach((dato) => {
+        .then(data => data.forEach((dato)  =>{
             let select = document.getElementById('updateSelect2')
             let option = document.createElement("option")
-            if($('#updateSelect').val() == dato.championshipID){
                 option.value = dato.raceID
                 option.text = `${dato.raceTrack} , ${dato.raceCountry} `
                 select.add(option);
-            }
+
 
         }))
         .catch(error => console.log('error', error));
@@ -60,17 +59,17 @@ $('#updateSelect2').change(() => {
             $('#showRace').html(`<form class="d-flex flex-wrap justify-content-center w-100 gap-3">
         <div class="input-group mb-3 w-25">
             <span class="input-group-text" >Track Name</span>
-            <input value="${jsonResult.track}" id="track" type="text" class="form-control" placeholder="Circuit" aria-label="circuit" aria-describedby="circuit">
+            <input value="${jsonResult.raceTrack}" id="track" type="text" class="form-control" placeholder="Circuit" aria-label="circuit" aria-describedby="circuit">
         </div>
 
         <div class="input-group mb-3 w-25">
             <span class="input-group-text" >Country</span>
-            <input value="${jsonResult.country}" id="country" type="text" class="form-control" placeholder="Country" aria-label="Country" aria-describedby="Country">
+            <input value="${jsonResult.raceCountry}" id="country" type="text" class="form-control" placeholder="Country" aria-label="Country" aria-describedby="Country">
         </div>
 
         <div class="input-group mb-3 w-25">
             <span class="input-group-text" >Race date</span>
-            <input value="${jsonResult.dateOfRace}" id="dateOfRace" type="date" class="form-control"   aria-label="Race date" aria-describedby="Race-date">
+            <input value="${jsonResult.raceDateOfRace}" id="dateOfRace" type="date" class="form-control"   aria-label="Race date" aria-describedby="Race-date">
         </div>
     </form>
     <button class="btn bg-success align-items w-50 m-auto mt-5" onclick="updateRace()">Update a Race</button>`)
