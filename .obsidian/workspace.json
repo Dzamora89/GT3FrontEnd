@@ -144,8 +144,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7d67e4b904518393",
+  "active": "ae1d616ebdf07aa6",
   "lastOpenFiles": [
+    "AdminSide/ChampionshipEntry/championshipEntryCreate.js~",
+    "AdminSide/ChampionshipEntry/ChampionshipEntryCreate.html~",
     "AdminSide/Driver/DriverUpdate.js~",
     "AdminSide/Driver/DriverDelete.js~",
     "AdminSide/Team/TeamAdmin.html~",
@@ -155,8 +157,6 @@
     "AdminSide/Race/RaceDelete.js~",
     "AdminSide/Race/RaceAdmin.js~",
     "AdminSide/Driver/DriverCreate.js~",
-    "AdminSide/Car/CarUpdate.js~",
-    "Obsidian/Kanban.md",
-    "Obsidian"
+    "Obsidian/Kanban.md"
   ]
 }

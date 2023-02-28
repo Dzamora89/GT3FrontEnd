@@ -36,30 +36,32 @@
 <!-- Fin del NavBar -->
 
 <div id="principal" class="container d-flex flex-column">
-  <h1 class="text-black text-center mt-5 mb-3">Create a Championship</h1>
+  <h1 class="text-black text-center mt-5 mb-3">Create a Championship Entry</h1>
 
   <form class="d-flex flex-wrap justify-content-center w-100 gap-3">
 
-    <select id="championShipSelect" class="form-select" aria-label="ChampionshipSelect">
+    <select id="championshipEntryChampionshipID" class="form-select" aria-label="ChampionshipSelect">
       <option selected>Select the Championship</option>
     </select>
-    <select id="TeamSelect" class="form-select " aria-label="ChampionshipSelect">
+    <select id="championshipEntryTeamID" class="form-select " aria-label="ChampionshipSelect">
       <option selected>Select the Team</option>
     </select>
-    <select id="CarSelect" class="form-select " aria-label="ChampionshipSelect">
+    <select id="championshipEntryCarID" class="form-select " aria-label="ChampionshipSelect">
       <option selected>Select the Car</option>
     </select>
-    <select id="DriverSelect" class="form-select " aria-label="ChampionshipSelect">
-      <option selected>Select the Driver</option>
-    </select>
+    <div id="drivers" class="container-fluid d-flex d-lg-flex flex-lg-row flex-column gap-2 m-0 p-0 flex-wrap">
+      <select id="DriverSelect-1" class="form-select selectDriver" aria-label="ChampionshipSelect">
+        <option selected>Select the Driver</option>
+      </select>
+    </div>
 
     <div class="input-group mb-3 ">
       <span class="input-group-text" id="carClassSpan">Class</span>
-      <input id="carClass" type="text" class="form-control" placeholder="Silver/Pro/AM" aria-label="Class"
+      <input id="championshipEntryClass" type="text" class="form-control" placeholder="Silver/Pro/AM" aria-label="Class"
              aria-describedby="class">
     </div>
   </form>
-  <button class="btn bg-success align-items w-50 m-auto mt-5" onclick="createChampionship()">Create championship
+  <button class="btn bg-success align-items w-50 m-auto mt-5" onclick="createChampionshipEntry()">Create championship Entry
   </button>
 </div>
 

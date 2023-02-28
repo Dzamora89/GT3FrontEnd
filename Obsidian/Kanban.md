@@ -13,7 +13,6 @@ kanban-plugin: basic
 ## Todo #FE
 
 - [ ] Admin #FE <br>- [ ] Home
-- [ ] ChampionshipEntry #FE <br>- [ ] Create<br>- [ ] Delete<br>- [ ] Update<br>- [ ] Admin
 - [ ] RaceResults #FE <br>- [ ] Admin<br>- [ ] Create<br>- [ ] Delete<br>- [ ] Update
 - [ ] Client Side #FE <br>- [ ] Ranking<br>- [ ] Perfiles Pilotos<br>- [ ] Paginas de Campeonatos<br>- [ ] Paginas de Equipos<br>- [ ] Paginas de Coches<br>- [ ] Vista de FindeSemana<br>- [ ] Siguientes Carreras<br>- [ ] PuntosGanadosEnCadaCarrera
 - [ ] Actualizar a Jquery #FE <br>- [ ] Admin<br>- [ ] Car<br>- [ ] Championship<br>- [ ] ChampionshipEntry<br>- [ ] Driver<br>- [ ] Race<br>- [ ] RaceResult<br>- [ ] Team
@@ -25,6 +24,7 @@ kanban-plugin: basic
 
 ## Doing
 
+- [ ] ChampionshipEntry #FE <br>- [ ] Create<br>- [ ] Delete<br>- [ ] Update<br>- [ ] Admin
 - [ ] Test Time Baby<br>- [x] car<br>- [x] championship<br>- [ ] championshipentry<br>- [x] driver<br>- [x] race<br>- [ ] raceResult<br>- [x] Team
 
 
